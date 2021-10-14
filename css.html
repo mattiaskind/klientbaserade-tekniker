@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klientbaserade tekniker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="header-sections">
+        <div class="logo-container">
+          <h1 class="logo"><a href="index.html">Klientbaserade tekniker</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <div class="main-sections">
+        <!-- ///////////////////////////////////////////////////////// -->
+        <!-- Inledning -->
+        <section>
+          <h2>CSS</h2>
+          <p>
+            Cascading Style Sheet (CSS) är ett språk som används för att
+            stilsätta HTML-dokument. Med CSS beskriver man hur de olika
+            HTML-elementen ska visas. Se vad CSS gör med den här sidan genom att
+            klicka på knappen nedan.
+          </p>
+          <button id="btn">Utan CSS</button>
+        </section>
+
+        <section>
+          <h3>Hur funkar det?</h3>
+          <p>
+            Om vi utgår från att vi vill ändra bakgrundsfärgen på body-elementet
+            i ett HTML-dokument till mörkblå kan vi göra på följande sätt:
+          </p>
+          <pre class="code-block">
+body {
+  background-color: darkblue;
+}
+</pre
+          >
+          <p>
+            I exemplet ovan har vi angett <code>body</code> för att stilsätta
+            det elementet. Inom måsvingarna anger vi vilken egenskap vi vill
+            stilsätta, vi vill alltså ändra bakgrundsfärgen, sedan anger vi
+            vilket värde vi vill ändra till. Tillsammans utgör ovanstående en
+            regeluppsättning. Olika egenskaper kan ges olika värden, vi kan till
+            exempel även ändra font-storleken genom att lägga till följande:
+          </p>
+          <pre class="code-block">
+body {
+  background-color: darkblue;
+  font-size: 20px;
+}
+</pre
+          >
+          <p>
+            Varje regeluppsättning måste omslutas av måsvingar. Varje egenskap
+            och dess värde måste separeras med kolon (:) och varje uppgift, dvs.
+            egenskap/värde måste avslutas med ett semikolon (;). Det är viktigt
+            att hålla sig till reglerna för att CSS-koden ska fungera.
+          </p>
+        </section>
+
+        <section class="section-example">
+          <h3>Stilsätta ett dokument</h3>
+          <p>
+            Var ska man skriva sin CSS-kod? Det finns några olika metoder att
+            använda för att lägga in CSS-kod, vi ska gå igenom dessa nu.
+          </p>
+          <h4>Extern CSS</h4>
+          <p>
+            Den bästa praxisen är normalt att använda en extern fil. Då kan du
+            skriva all din css-kod separat. Det gör det möjligt att använda
+            samma css-fil i flera dokument på din webbplats. För att länka en
+            extern css-fil i ditt HTML-dokument lägger du in nedanstående kod
+            inom <code>&lt;head&gt;</code>-taggen.
+          </p>
+          <code class="code-block">
+            &lt;link rel="stylesheet" href="style.css" /&gt;
+          </code>
+          <div class="text-focus">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  style="color: #ff9ac2"
+                />
+              </svg>
+            </div>
+            Notera att href-taggen anger platsen för din css-fil. I exemplet
+            ovan heter filen style.css. Om du är osäker kan du läsa lite om
+            sökvägar under kategorin HTML här på sidan.
+          </div>
+
+          <p>Så här kan det se ut i ett dokument med en länkad css-fil:</p>
+
+          <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="sv"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Sidan titel&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css" /&gt;
+  &lt;/head&gt;
+...
+</pre
+          >
+          <h4>Intern CSS</h4>
+          <p>
+            Med intern silsättning skrivs css-koden i samma dokument som
+            HTML-koden. CSS-koden omsluts då av style-taggar.
+          </p>
+          <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="sv"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Sidan titel&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css" /&gt;
+    &lt;style&gt;
+      body {
+        background-color: blue;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+...
+</pre
+          >
+
+          <h4>Inline CSS</h4>
+          <p>
+            Slutligen går det att applicera stilsättning direkt på ett specifikt
+            element i HTML-koden. Då används attributet <code>style=""</code>. I
+            exemplet nedanför appliceras stilsättning direkt på ett p-element.
+          </p>
+          <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="sv"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Sidan titel&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;p style="color: blue;"&gt;Den här texten blir blå.&lt;/p&gt;
+  &lt;p&gt;Men det blir inte den här.&lt;/p&gt;
+
+  &lt;body&gt;
+&lt;/html&gt;
+</pre
+          >
+        </section>
+
+        <section class="section-example">
+          <h4>Klasser och ID:n</h4>
+          <h5>Klasser</h5>
+          <p>
+            I det inledande exemplet applicerade vi en bakgrundsfärg på
+            body-elementet. För att välja ett element skrev vi
+            <code>body</code> följt av måsvingar och applicerade sedan de
+            egenskaper vi önskade på elementet. På samma sätt kan vi göra med
+            andra element, vi kan exempelvis ändra färgen på alla rubriker av
+            typen <code>&lt;h3&gt;</code> genom att skriva så här.
+          </p>
+          <pre class="code-block">
+h3 {
+  color: green;
+}
+</pre
+          >
+          <p>
+            Med ovanstående kod anger vi generellt att samtliga element av typen
+            <code>&lt;h3&gt;</code> ska ha färgen grön. Om vi enbart vill ändra
+            färgen på en rubrik, inte alla, kan vi använda oss av klasser eller
+            ID:n. I exemplet nedanför vill vi ändra färg på den första rubriken
+            och det första stycket, men inget annat, så vi skapar en klass.
+          </p>
+          <pre class="code-block">
+.green {
+  color: green;
+}
+</pre
+          >
+          <div class="text-focus">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  style="color: #ff9ac2"
+                />
+              </svg>
+            </div>
+            Notera punkten (.) före klassnamnet.
+          </div>
+          <p>
+            Klassen <code>.green</code> kan vi sedan använda på specifika
+            element
+          </p>
+
+          <pre class="code-block">
+&lt;body&gt;
+  &lt;h3 class="green"&gt;Rubrik 1&lt;/h3&gt;
+  &lt;p class="green"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+
+  &lt;h3&gt;Rubrik 2&lt;/h3&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/p&gt;
+&lt;/body&gt;
+</pre
+          >
+          <h5>ID</h5>
+          <p>
+            Istället för klasser går det också att använda sig av ID. Det
+            fungerar på ungefär samma sätt. Istället för att ange en punkt (.)
+            före namnet på klassen anges tecknet (#). Till skilland från klasser
+            är tanken med ID:n att dessa ska vara unika. Det ska alltså bara
+            finnas ett element som har ett specifikt ID per HTML-dokument.
+          </p>
+          <pre class="code-block">
+#menu {
+  color: green;
+}
+</pre
+          >
+        </section>
+
+        <section class="section-example">
+          <h3>Block och inline</h3>
+          <p>
+            I CSS omgärdas allting av boxar. Det finns generellt två varianter
+            av boxar: block-boxar och inline-boxar. Egenskaperna för respektive
+            variant avgör hur boxen anpassar sig till HTML-dokumentets flöde.
+          </p>
+          <p>
+            Block-element skapar alltid ett radbyte medan inline-element inte
+            gör det. Vi ska titta närmare på två sådana varianter. Elementet
+            <code>&lt;div&gt;</code> är av typen block och elementet
+            <code>&lt;span&gt;</code> är av typen inline.
+          </p>
+          <pre class="code-block">
+&lt;div&gt;Efter det här innehållet följer ett radbyte.&lt;/div&gt;
+&lt;p&gt;Lorem ipsum &lt;span class="blue"&gt;inget radbyte&lt;/span&gt;amet elit.&lt;/p&gt;
+</pre
+          >
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-text">
+        Den här sidan har byggts av Mattias Kind som en del av kursen Agila
+        utvecklingsmetoder och HTML med syfte att demonstrera HTML och CSS.
+      </div>
+    </footer>
+    <script src="scripts/css_script.js"></script>
+  </body>
+</html>

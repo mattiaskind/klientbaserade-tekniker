@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klientbaserade tekniker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="header-sections">
+        <div class="logo-container">
+          <h1 class="logo"><a href="index.html">Klientbaserade tekniker</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <div class="main-sections">
+        <h2>HTML</h2>
+        <!-- ///////////////////////////////////////////////////////// -->
+        <!-- Inledning -->
+        <section>
+          <p>
+            HTML står för Hypertext Markup Language och är ett märkspråk som
+            används för att ge webbläsaren instruktioner om hur HTML-dokument
+            ska strukturetas. Ett HTML-dokument byggs upp med hjälp av olika
+            element. Ofta består elementen av en tag som öppnar och en tagg som
+            stänger, där innehållet placeras inom taggarna. Ett exempel är
+            elementet
+            <code>&lt;p&gt;</code> som representerar ett stycke. Om du har en
+            text som du vill att webbläsaren ska tolka som ett textstycke
+            omsluter du texten med p-element, se nedanför.
+          </p>
+          <code class="code-block"
+            >&lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Repellendus provident...&lt;/p&gt;</code
+          >
+          <div class="text-focus">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  style="color: #ff9ac2"
+                />
+              </svg>
+            </div>
+            Notera p-taggarna och att den avslutande taggen skrivs med ett
+            snedstreck &lt;/p&gt;
+          </div>
+
+          <h3>Struktur</h3>
+          <p>
+            Det finns många olika element. Några är grundläggande och ska alltid
+            finnas med. En doctype-tagg bör inleda dokumentet, den hjälper
+            webbläsaren att förstå vilken HTML-version dokumentet är skrivet i.
+            Därefter kommer <code>&lt;html&gt;</code> och sedan placeras övriga
+            element och innehåll. Dokumentet avslutas med
+            <code>&lt;/html&gt;</code>. En vanlig struktur kan se ut så här.
+          </p>
+          <!-- På grund av pre-taggen krävs att nedanstående inte har något indrag eftersom <pre> renderar texten precis så som den visas i dokumentet -->
+          <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="sv"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt; 
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Dokumentets titel&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</pre
+          >
+          <h4>Vad betyder de olika delarna?</h4>
+          <ul>
+            <li>
+              <code>&lt;head&gt;</code> - här placeras meta-data av olika slag,
+            </li>
+            <li>
+              <code>&lt;title&gt;</code> - titeln på sidan, texten som visas i
+              fliken på din webbläsare,
+            </li>
+            <li>
+              <code>&lt;body&gt;</code> - inom det här elementet placeras
+              majoriten av sidans innehåll.
+            </li>
+          </ul>
+          <p>
+            Om du vill kombinera det som gåtts igenom hittills, det vill säga
+            textstycket ovan med den grundläggande strukturen placerar du
+            stycket, dvs. p-elementet och dess innehåll, inom body-elementet. Då
+            ser koden ut så här:
+          </p>
+          <!-- Återigen, <pre> ställer till formateringen -->
+          <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+  &lt;html lang="sv"&gt; 
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"/&gt; 
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Dokumentets titel&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
+      provident qui esse ab iure iste quis aliquid corporis minus voluptatum
+      illum quisquam doloribus odit.
+    &lt;/p&gt;  
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre
+          >
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            >Se ett exempel på ovanstående kod</a
+          >
+          <h2>Fler element</h2>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////// -->
+        <!-- Fler element -->
+
+        <!-- Rubriker -->
+        <section class="section-example">
+          <h3>Rubriker</h3>
+          <p>
+            Rubriker skrivs med elementet <code>&lt;h#&gt;</code> där # ersätts
+            med ett nummer mellan 1 och 6 följt av en avslutande tagg. För att
+            göra en rubrik av andra ordningen omsluter du till exempel
+            rubriktexten, så här:
+            <code>&lt;h2&gt;Rubrik av andra ordningen&lt;/h2&gt;</code>.
+            Nedanför ser du några olika varianter av rubriker.
+          </p>
+          <h2>Rubrik h2</h2>
+          <h3>Rubrik h3</h3>
+          <h4>Rubrik h4</h4>
+          <h5>Rubrik h5</h5>
+        </section>
+
+        <!-- Länkar -->
+        <section class="section-example">
+          <h3>Länkar</h3>
+          <p>
+            Länkar skrivs <code>&lt;a href=""&gt;&lt;/a&gt;</code>. Mellan
+            citattecknen placeras länken, det vill säga sökvägen och mellan de
+            två taggarna <code>&lt;a&gt;</code> och
+            <code>&lt;/a&gt;</code> skrivs den text som du vill ska synas på
+            sidan.
+          </p>
+          <code class="code-block">
+            &lt;a href="https://google.com/"&gt;Det här är en länk till
+            Google&lt;/a&gt;
+          </code>
+          <p>
+            Koden ovan blir en länk:
+            <a href="https://google.com/">Det här är en länk till Google</a>.
+          </p>
+        </section>
+
+        <!-- Bilder -->
+        <section class="section-example">
+          <h3>Bilder</h3>
+          <p>
+            Om du vill lägga in en bild på sidan kan du använda img-taggen. Så
+            här ser den ut: <code>&lt;img src="" alt="" /&gt;</code>. Du anger
+            sökvägen till filen mellan situationstecknen. Utöver sökvägen till
+            filen har har det här elementet attributet <code>alt=""</code>.
+            Många HTML-element har olika attribut och i det här fallet är syftet
+            med attributet att beskriva vad bilden föreställer om den inte kan
+            visas av webbläsaren. Här nedanför visas en bild som jag har hämtat
+            från
+            <a
+              href="https://unsplash.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >unsplash.com
+            </a>
+          </p>
+          <div class="text-focus">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  style="color: #ff9ac2"
+                />
+              </svg>
+            </div>
+            Lägg märke till att det här elementet inte har någon stängande tagg.
+          </div>
+
+          <p>Bilden nedanför har den här koden.</p>
+          <code class="code-block">
+            &lt;img src="https://source.unsplash.com/lqBmSXnXScs/640x428"
+            alt="Dimmiga trädtoppar" /&gt;
+          </code>
+
+          <div class="center-content">
+            <img
+              src="https://source.unsplash.com/lqBmSXnXScs/640x428"
+              alt="Dimmiga trädtoppar"
+            />
+          </div>
+
+          <!-- Om sökvägar -->
+          <div class="section-focus">
+            <div class="section-focus-header">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  style="color: #4dabf7"
+                />
+              </svg>
+              <h5>Om sökvägar</h5>
+            </div>
+            <p>Det finns två varianter av sökvägar: absoluta och relativa.</p>
+            <p>
+              Absoluta sökvägar används när du vill länka till något som inte
+              finns på din egna webbsida, som bilden ovanför. Den är från en
+              extern webbplats och sökvägen till bilden är därför absolut. En
+              relativ sökväg anger platsen för en fil i förhållande till den
+              aktuella mappen. Om du vill nå en bildfil som heter
+              <code>logo.png</code> och som ligger i en mapp som heter bilder är
+              sökvägen <code>bilder/logo.png</code>.
+            </p>
+            <p>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#absolute_urls_vs_relative_urls"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Läs mer om sökvägar
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Listor -->
+        <section class="section-example">
+          <h4>Listor</h4>
+          <p>
+            Det går att göra olika typer av listor med HTML, exempelvis ordnade
+            eller oordnade. För att skapa en oordnade lista används elementen
+            <code>&lt;ul&gt;</code> och <code>&lt;li&gt;</code>. För att skapa
+            en ordnad lista används <code>&lt;ol&gt;</code> och
+            <code>&lt;li&gt;</code>
+          </p>
+          <h4>Oordnad lista</h4>
+          <ul>
+            <li>Punkt ett</li>
+            <li>Punkt två</li>
+            <li>Punkt tre</li>
+          </ul>
+          <h4>Ordnad lista</h4>
+          <ol>
+            <li>Punkt ett</li>
+            <li>Punkt två</li>
+            <li>Punkt tre</li>
+          </ol>
+          <pre class="code-block">
+&lt;ul&gt;
+  &lt;li&gt;Punkt ett&lt;/li&gt;
+  &lt;li&gt;Punkt två&lt;/li&gt;
+  &lt;li&gt;Punkt tre&lt;/li&gt;
+&lt;/ul&gt;
+              
+&lt;ol&gt;
+  &lt;li&gt;Punkt ett&lt;/li&gt;
+  &lt;li&gt;Punkt två&lt;/li&gt;
+  &lt;li&gt;Punkt tre&lt;/li&gt;
+&lt;/ol&gt;
+</pre
+          >
+          <p>
+            Dessutom finns beskrivande listor, dessa skrivs med taggarna
+            <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code> och
+            <code>&lt;dd&gt;</code>.
+          </p>
+          <pre class="code-block">
+&lt;dl&gt;
+  &lt;dt&gt;Rubrik 1&lt;/dt&gt;
+  &lt;dd&gt;Första objektet&lt;/dd&gt;
+  &lt;dd&gt;Andra objektet&lt;/dd&gt;
+  
+  &lt;dt&gt;Rubrik 2&lt;/dt&gt;
+  &lt;dd&gt;Första objektet&lt;/dd&gt;
+  &lt;dd&gt;Andra objektet&lt;/dd&gt;
+&lt;/dl&gt;                          
+</pre
+          >
+          <p>Listan ser ut så här:</p>
+          <dl>
+            <dt>Rubrik 1</dt>
+            <dd>Första objektet</dd>
+            <dd>Andra objektet</dd>
+
+            <dt>Rubrik 2</dt>
+            <dd>Första objektet</dd>
+            <dd>Andra objektet</dd>
+          </dl>
+        </section>
+
+        <section class="section-example">
+          <h4>Kommentarer</h4>
+          <p>
+            Det går att skriva kommentarer i HTML. Dessa bryr sig inte
+            webbläsaren om så de syns inte på sidan för användaren som besöker
+            den. Däremot syns eventuella kommentarer alltid i sidkällan, om
+            någon tittar på koden.
+          </p>
+          <code class="code-block"
+            >&lt;!-- Så här skrivs kommentarer i HTML --&gt;</code
+          >
+        </section>
+        <section class="section-example">
+          <h4>Escapsekvenser</h4>
+        </section>
+
+        <section class="section-example">
+          <h4>Formulär</h4>
+          <p>Skriv något om formulär</p>
+          <form>
+            <div class="label">
+              <label for="username">Användarnamn</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value="Användarnamn"
+              />
+            </div>
+            <div>
+              <label for="password">Lösenord</label>
+            </div>
+            <div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value="Lösenord"
+              />
+            </div>
+            <button class="btn-login">Logga in</button>
+          </form>
+        </section>
+
+        <section class="section-example">
+          <h4>Läs mer om HTML</h4>
+          <p>
+            Nu har vi gått igenom några av de grundläggande elementen i HTML.
+            För den som är intresserad finns många fler element att lära känna.
+            Jag kan rekommendera att läsa vidare på
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MDN:s webbplats </a
+            >.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-text">
+        Den här sidan har byggts av Mattias Kind som en del av kursen Agila
+        utvecklingsmetoder och HTML med syfte att demonstrera HTML och CSS.
+      </div>
+    </footer>
+    <script src="scripts/html_script.js"></script>
+  </body>
+</html>
