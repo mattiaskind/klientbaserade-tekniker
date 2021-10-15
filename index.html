@@ -411,31 +411,25 @@
             i, krävs kod på serversidan. Det är ett mer omfattande ämne som inte
             gås igenom i det här exemplet.
           </div>
-          <form>
-            <div class="label">
-              <label for="username">Användarnamn</label>
-            </div>
-            <div>
-              <input type="text" id="username" value="Användarnamn" />
-            </div>
-            <div>
-              <label for="password">Lösenord</label>
-            </div>
-            <div>
-              <input type="password" id="password" value="Lösenord" />
-            </div>
-            <button class="btn-login">Logga in</button>
-          </form>
+          <div class="form">
+            <form>
+              <div class="label">
+                <label for="message">Skriv ett meddelande</label>
+              </div>
+              <div>
+                <input type="text" id="message" />
+              </div>
+              <button class="btn-message">Publicera</button>
+            </form>
+            <div class="form-msg-container hidden"></div>
+          </div>
           <p>I stora drag ser formuläret ovan ut så här i kod:</p>
           <pre class="code-block">
 &lt;form&gt;
-  &lt;label for="username"&gt;Användarnamn&lt;/label&gt;
-  &lt;input type="text" id="username" value="Användarnamn" /&gt;
+  &lt;label for="message"&gt;Meddelande&lt;/label&gt;
+  &lt;input type="text" id="message" /&gt;
 
-  &lt;label for="password"&gt;Lösenord&lt;/label&gt;
-  &lt;input type="password" id="password" value="Lösenord" /&gt;
-
-  &lt;button&gt;Logga in&lt;/button&gt;
+  &lt;button&gt;Publicera&lt;/button&gt;
 &lt;/form&gt;
 </pre
           >

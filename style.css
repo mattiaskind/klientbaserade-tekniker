@@ -34,6 +34,8 @@
   --color-text-focus-border: #ffaccd;
 
   --color-form-input-border: #afaf9e;
+  --color-form-border: #f4f4f2;
+  --color-form-shadow: #a5a597;
   --color-button-bg: #ddddd6;
   --color-button-hover: #c5c5bb;
 
@@ -364,6 +366,39 @@ code {
 .text-focus p {
   margin: 0;
 }
+
+/* HIDDEN */
+
+.hidden {
+  display: none;
+}
+
+/* FORM-RELATERADE ELEMENT */
+
+.form {
+  border-top: 1px solid var(--color-form-border);
+  border-left: 1px solid var(--color-form-border);
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 1px 1px 2px var(--color-form-shadow);
+}
+
+#message {
+  width: 30rem;
+}
+
+.form-msg-container {
+  padding: 1.5rem;
+  border: 1px solid var(--color-section-example-border);
+  border-radius: 5px;
+}
+
+.form-msg-container p {
+  padding: 0;
+  margin: 0;
+}
+
+/* FOOTER */
 
 footer {
   color: var(--color-footer-font);
