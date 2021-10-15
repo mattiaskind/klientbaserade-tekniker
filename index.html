@@ -218,7 +218,8 @@
                 />
               </svg>
             </div>
-            Lägg märke till att det här elementet inte har någon stängande tagg.
+            Lägg märke till att det här elementet bara består av en tagg, det
+            har alltså inte har någon stängande tagg.
           </div>
 
           <p>Bilden nedanför har den här koden.</p>
@@ -361,32 +362,83 @@
 
         <section class="section-example">
           <h4>Formulär</h4>
-          <p>Skriv något om formulär</p>
+          <p>
+            Formulär skapas med en kombination av olika element. Elementen
+            placeras inom <code>&lt;form&gt;&lt;/form&gt;</code>. Nedanför ser
+            du en enklare variant med två fält och en knapp. Utöver
+            <code>&lt;form&gt;</code>-elementet har följande använts i det här
+            exemplet:
+          </p>
+          <ul>
+            <li>
+              <code>&lt;label&gt;</code> - Namnger en specifik del av ett
+              formulär. I exemplet nedan är rubriken till respektive fält en
+              label, dvs. Användarnamn samt Lösenord.
+            </li>
+            <li>
+              <code>&lt;input&gt;</code> - Kan användas för att skapa en mängd
+              olika interaktiva kontroller. Vilken typ av kontroll som ska visas
+              anges med attributet <code>type</code>. I exemplet nedanför är
+              typerna <code>text</code> och <code>password</code>
+            </li>
+            <li>
+              <code>&lt;button&gt;</code> - Knappen som används för att skicka
+              information som besökaren lämnat i formulärfälten.
+            </li>
+          </ul>
+          <div class="text-focus">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  style="color: #ff9ac2"
+                />
+              </svg>
+            </div>
+            För att faktiskt få HTML-formulär att fungera som tänkt, det vill
+            säga för att få användning av den information som besökaren fyller
+            i, krävs kod på serversidan. Det är ett mer omfattande ämne som inte
+            gås igenom i det här exemplet.
+          </div>
           <form>
             <div class="label">
               <label for="username">Användarnamn</label>
             </div>
             <div>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                value="Användarnamn"
-              />
+              <input type="text" id="username" value="Användarnamn" />
             </div>
             <div>
               <label for="password">Lösenord</label>
             </div>
             <div>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value="Lösenord"
-              />
+              <input type="password" id="password" value="Lösenord" />
             </div>
             <button class="btn-login">Logga in</button>
           </form>
+          <p>I stora drag ser formuläret ovan ut så här i kod:</p>
+          <pre class="code-block">
+&lt;form&gt;
+  &lt;label for="username"&gt;Användarnamn&lt;/label&gt;
+  &lt;input type="text" id="username" value="Användarnamn" /&gt;
+
+  &lt;label for="password"&gt;Lösenord&lt;/label&gt;
+  &lt;input type="password" id="password" value="Lösenord" /&gt;
+
+  &lt;button&gt;Logga in&lt;/button&gt;
+&lt;/form&gt;
+</pre
+          >
         </section>
 
         <section class="section-example">
