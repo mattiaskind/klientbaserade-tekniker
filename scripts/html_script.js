@@ -32,7 +32,6 @@ const displayMessage = function (e) {
   const sanitizedMessage = sanitizeString(userMessage.value);
   // Skapa html
   const html = `
-  <h5>Tack för ditt meddelande</h5>
   <p>Du skrev: ${sanitizedMessage}</p>
   `;
   // Visa html och meddelandet på sidan
