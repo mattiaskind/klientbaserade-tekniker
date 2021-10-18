@@ -113,6 +113,10 @@ dd {
   padding: 0.2rem 0.2rem 0.2rem 1rem;
 }
 
+table {
+  margin-bottom: 2rem;
+}
+
 th {
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-section-example-border);
