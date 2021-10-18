@@ -137,7 +137,7 @@
             >Se ett exempel på ovanstående kod</a
           >
           <h2>Fler element</h2>
-          <ul>
+          <ul class="content-list">
             <li><a href="#headings">Rubriker</a></li>
             <li><a href="#links">Länkar</a></li>
             <li><a href="#images">Bilder</a></li>
@@ -145,6 +145,7 @@
             <li><a href="#comments">Kommentarer</a></li>
             <li><a href="#escseq">Escapesekvenser</a></li>
             <li><a href="#forms">Formulär</a></li>
+            <li><a href="#tables">Tabeller</a></li>
             <li><a href="#more">Lite blandat</a></li>
           </ul>
         </section>
@@ -382,26 +383,24 @@
           </p>
           <ul>
             <li>
-              <code>&lt;label&gt;</code> - Namnger en specifik del av ett
-              formulär. I exemplet nedan är rubriken till respektive fält en
-              label, dvs. Användarnamn samt Lösenord.
+              <code>&lt;label&gt;</code> - Är en etikett som namnger en specifik
+              del av ett formulär. I exemplet nedan är texten över
+              inmatningsfältet en label.
             </li>
             <li>
               <code>&lt;input&gt;</code> - Kan användas för att skapa en mängd
               olika interaktiva kontroller. Vilken typ av kontroll som ska visas
               anges med attributet <code>type</code>. I exemplet nedanför är
-              typerna <code>text</code> och <code>password</code>
+              typen <code>text</code>.
             </li>
             <li>
               <code>&lt;button&gt;</code> - Knappen som används för att skicka
-              information som besökaren lämnat i formulärfälten.
+              den information som besökaren lämnat i formulärfältet.
             </li>
           </ul>
           <div class="text-focus">
             <div>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -460,9 +459,42 @@
                 <option value="grön">Grön</option>
                 <option value="gul">Gul</option>
               </select>
+              <br />
+              <label for="pass">Fält för lösenord: </label>
+              <input type="password" id="pass" /><br />
+              <label for="number">Bara siffror: </label>
+              <input type="number" id="number" />
             </form>
           </div>
         </section>
+        <!-- Tabeller -->
+        <section class="section-example" id="tables">
+          <h4>Tabeller</h4>
+          <p>
+            Några vanligt förekommande element för att skapa tabeller i HTML är
+            <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> och
+            <code>&lt;th&gt;</code>.
+          </p>
+          <p>Här är ett exempel på en tabell:</p>
+          <table>
+            <tr>
+              <th>Kategori 1</th>
+              <th>Kategori 2</th>
+              <th>Kategori 3</th>
+            </tr>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+            </tr>
+          </table>
+        </section>
+
         <!-- Läs mer -->
         <section class="section-example">
           <h4>Läs mer om HTML</h4>
