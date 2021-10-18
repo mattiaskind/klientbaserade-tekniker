@@ -75,9 +75,21 @@ body {
             egenskap/värde måste avslutas med ett semikolon (;). Det är viktigt
             att hålla sig till reglerna för att CSS-koden ska fungera.
           </p>
+
+          <h2>Innehåll</h2>
+          <ul class="content-list">
+            <li><a href="#css-intro">Hur man applicerar CSS</a></li>
+            <li><a href="#css-classes-id">Klasser och ID:n</a></li>
+            <li><a href="#css-attributes">Vanliga egenskaper</a></li>
+            <li><a href="#css-priority">Prioriteringsregler</a></li>
+            <li><a href="#css-positioning">Positionering</a></li>
+            <li><a href="#css-size-margins">Storlek och marginaler</a></li>
+          </ul>
         </section>
 
-        <section class="section-example">
+        <!-- Stilsätta ett dokument -->
+
+        <section class="section-example" id="intro">
           <h3>Stilsätta ett dokument</h3>
           <p>
             Var ska man skriva sin CSS-kod? Det finns några olika metoder att
@@ -178,7 +190,8 @@ body {
           >
         </section>
 
-        <section class="section-example">
+        <!-- Klasser och ID:n -->
+        <section class="section-example" id="classes-id">
           <h4>Klasser och ID:n</h4>
           <h5>Klasser</h5>
           <p>
@@ -257,26 +270,6 @@ h3 {
 #menu {
   color: green;
 }
-</pre
-          >
-        </section>
-
-        <section class="section-example">
-          <h3>Block och inline</h3>
-          <p>
-            I CSS omgärdas allting av boxar. Det finns generellt två varianter
-            av boxar: block-boxar och inline-boxar. Egenskaperna för respektive
-            variant avgör hur boxen anpassar sig till HTML-dokumentets flöde.
-          </p>
-          <p>
-            Block-element skapar alltid ett radbyte medan inline-element inte
-            gör det. Vi ska titta närmare på två sådana varianter. Elementet
-            <code>&lt;div&gt;</code> är av typen block och elementet
-            <code>&lt;span&gt;</code> är av typen inline.
-          </p>
-          <pre class="code-block">
-&lt;div&gt;Efter det här innehållet följer ett radbyte.&lt;/div&gt;
-&lt;p&gt;Lorem ipsum &lt;span class="blue"&gt;inget radbyte&lt;/span&gt;amet elit.&lt;/p&gt;
 </pre
           >
         </section>

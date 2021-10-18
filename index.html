@@ -144,7 +144,8 @@
             <li><a href="#escseq">Escapesekvenser</a></li>
             <li><a href="#forms">Formulär</a></li>
             <li><a href="#tables">Tabeller</a></li>
-            <li><a href="#more">Lite blandat</a></li>
+            <li><a href="#more">Blandat</a></li>
+            <li><a href="#block-inline">Block och inline</a></li>
           </ul>
         </section>
 
@@ -489,11 +490,36 @@
           </table>
         </section>
 
-        <!-- Lite blandat -->
-        <section class="section-example" id="tables">
-          <h4>Lite blandat</h4>
+        <!-- Blandat -->
+        <section class="section-example" id="more">
+          <h4>Blandat</h4>
           <h5>Radbrytning</h5>
           <p>Radbrytningar kan göras med <code>&lt;br /&gt;</code></p>
+        </section>
+
+        <!-- Block och inline -->
+        <section class="section-example" id="block-inline">
+          <h3>Block och inline</h3>
+          <p>
+            I HTML består det mesta av boxar, generellt finns två varianter:
+            block-boxar och inline-boxar. Egenskaperna för respektive variant
+            avgör hur boxen anpassar sig till HTML-dokumentets flöde.
+          </p>
+          <p>
+            Block-element skapar alltid ett radbyte medan inline-element inte
+            gör det. Elementet
+            <code>&lt;div&gt;</code> är av typen block och elementet
+            <code>&lt;span&gt;</code> är av typen inline.
+          </p>
+          <pre class="code-block">
+&lt;div&gt;Efter det här innehållet följer ett radbyte.&lt;/div&gt;
+&lt;p&gt;Lorem ipsum &lt;span class="blue"&gt;inget radbyte&lt;/span&gt;amet elit.&lt;/p&gt;
+</pre
+          >
+          <p>
+            Attributet <code>class</code> i exemplet ovan har med CSS att göra.
+            <a href="css.html">Ta mig vidare till avsnittet om CSS</a>.
+          </p>
         </section>
 
         <!-- Läs mer -->
