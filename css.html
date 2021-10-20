@@ -36,8 +36,9 @@
           <p>
             Cascading Style Sheet (CSS) är ett språk som används för att
             stilsätta HTML-dokument. Med CSS beskriver man hur de olika
-            HTML-elementen ska visas. Se vad CSS gör med den här sidan genom att
-            klicka på knappen nedan.
+            HTML-elementen ska visas och vilka egenskaper de ska ha, exempelvis
+            vilken färg det ska vara på texten. Se vad CSS gör med den här sidan
+            genom att klicka på knappen nedan.
           </p>
           <button id="btn">Utan CSS</button>
         </section>
@@ -79,7 +80,7 @@ body {
           <h2>Innehåll</h2>
           <ul class="content-list">
             <li><a href="#css-intro">Hur man applicerar CSS</a></li>
-            <li><a href="#css-classes-id">Klasser och ID:n</a></li>
+            <li><a href="#css-class-vs-id">Klasser och ID:n</a></li>
             <li><a href="#css-attributes">Några vanliga egenskaper</a></li>
             <li><a href="#css-priority">Prioriteringsregler</a></li>
             <li><a href="#css-positioning">Positionering</a></li>
@@ -93,7 +94,7 @@ body {
           <h3>Stilsätta ett dokument</h3>
           <p>
             Var ska man skriva sin CSS-kod? Det finns några olika metoder att
-            använda för att lägga in CSS-kod, vi ska gå igenom dessa nu.
+            använda för att lägga in CSS-kod.
           </p>
           <h4>Extern CSS</h4>
           <p>
@@ -128,7 +129,7 @@ body {
             </div>
             Notera att href-taggen anger platsen för din css-fil. I exemplet
             ovan heter filen style.css. Om du är osäker kan du läsa lite om
-            sökvägar under kategorin HTML här på sidan.
+            sökvägar under kategorin HTML.
           </div>
 
           <p>Så här kan det se ut i ett dokument med en länkad css-fil:</p>
@@ -169,7 +170,7 @@ body {
           <h4>Inline CSS</h4>
           <p>
             Slutligen går det att applicera stilsättning direkt på ett specifikt
-            element i HTML-koden. Då används attributet <code>style=""</code>. I
+            element i HTML-koden. Då används attributet <code>style</code>. I
             exemplet nedanför appliceras stilsättning direkt på ett p-element.
           </p>
           <pre class="code-block">
@@ -191,7 +192,7 @@ body {
         </section>
 
         <!-- Klasser och ID:n -->
-        <section class="section-example" id="css-classes-id">
+        <section class="section-example" id="css-class-vs-id">
           <h4>Klasser och ID:n</h4>
           <h5>Klasser</h5>
           <p>
@@ -209,7 +210,7 @@ h3 {
 </pre
           >
           <p>
-            Med ovanstående kod anger vi generellt att samtliga element av typen
+            Med ovanstående kod anger vi alltså att samtliga element av typen
             <code>&lt;h3&gt;</code> ska ha färgen grön. Om vi enbart vill ändra
             färgen på en rubrik, inte alla, kan vi använda oss av klasser eller
             ID:n. I exemplet nedanför vill vi ändra färg på den första rubriken
@@ -260,11 +261,11 @@ h3 {
           >
           <h5>ID</h5>
           <p>
-            Istället för klasser går det också att använda sig av ID. Det
+            Istället för klasser går det också att använda sig av ID:n. Det
             fungerar på ungefär samma sätt. Istället för att ange en punkt (.)
-            före namnet på klassen anges tecknet (#). Till skilland från klasser
-            är tanken med ID:n att dessa ska vara unika. Det ska alltså bara
-            finnas ett element som har ett specifikt ID per HTML-dokument.
+            före namnet på klassen anges (#). Till skilland från klasser ska
+            ID:n vara unika. Det ska alltså bara finnas ett element som har ett
+            specifikt ID per HTML-dokument.
           </p>
           <pre class="code-block">
 #menu {
@@ -277,7 +278,7 @@ h3 {
         <!-- Några vanliga egenskaper -->
         <section class="section-example" id="css-attributes">
           <h4>Några vanliga egenskaper</h4>
-          <p>Här nedanför är finns ett urval av några vanliga css-element.</p>
+          <p>Här är ett urval av vanliga css-element.</p>
 
           <span style="color: blue">Med color kan du ange textfärgen.</span>
           <code class="code-block">color: blue</code>
@@ -301,6 +302,18 @@ h3 {
             >Bakgrundsfärg</span
           >
           <code class="code-block">background-color: darkorchid</code>
+        </section>
+
+        <section class="section-example" id="css-priority">
+          <h4>Prioriteringsregler</h4>
+        </section>
+
+        <section class="section-example" id="css-positioning">
+          <h4>Positionering</h4>
+        </section>
+
+        <section class="section-example" id="css-size-margins">
+          <h4>Storlek och marginaler</h4>
         </section>
       </div>
     </main>

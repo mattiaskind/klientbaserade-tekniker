@@ -9,7 +9,7 @@ const sanitizeString = function (str) {
   return str.trim();
 };
 
-// Funktionen skickas vidare till event-hanteraren och körs när besökaren
+// Skickas vidare till event-hanteraren och körs när besökaren
 // klickar på knappen i formuläret.
 const displayMessage = function (e) {
   e.preventDefault();
@@ -38,4 +38,5 @@ const displayMessage = function (e) {
   formMsgContainer.insertAdjacentHTML('afterbegin', html);
 };
 
+// Lägger till event listener till formulär-knappen
 button.addEventListener('click', displayMessage);
