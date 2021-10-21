@@ -30,8 +30,8 @@
     <main>
       <div class="main-sections">
         <h2>HTML</h2>
-        <!-- ///////////////////////////////////////////////////////// -->
-        <!-- Inledning -->
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------ Inledning ------------------------------>
         <section>
           <p>
             HTML står för Hypertext Markup Language och är ett märkspråk som
@@ -136,24 +136,26 @@
 
           <h2>Fler element</h2>
           <ul class="content-list">
-            <li><a href="#headings">Rubriker</a></li>
-            <li><a href="#links">Länkar</a></li>
-            <li><a href="#images">Bilder</a></li>
-            <li><a href="#lists">Listor</a></li>
-            <li><a href="#comments">Kommentarer</a></li>
-            <li><a href="#escseq">Escapesekvenser</a></li>
-            <li><a href="#forms">Formulär</a></li>
-            <li><a href="#tables">Tabeller</a></li>
-            <li><a href="#more">Blandat</a></li>
-            <li><a href="#block-inline">Block och inline</a></li>
+            <li><a href="#html-headings">Rubriker</a></li>
+            <li><a href="#html-links">Länkar</a></li>
+            <li><a href="#html-images">Bilder</a></li>
+            <li><a href="#html-lists">Listor</a></li>
+            <li><a href="#html-comments">Kommentarer</a></li>
+            <li><a href="#html-escseq">Escapesekvenser</a></li>
+            <li><a href="#html-forms">Formulär</a></li>
+            <li><a href="#html-tables">Tabeller</a></li>
+            <li><a href="#html-more">Blandat</a></li>
+            <li><a href="#html-block-inline">Block och inline</a></li>
+            <li><a href="#html-read-more">Läs mer</a></li>
           </ul>
         </section>
 
-        <!-- ///////////////////////////////////////////////////////// -->
-        <!-- Fler element -->
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!----------------------------- FLER ELEMENT ---------------------------->
 
-        <!-- Rubriker -->
-        <section class="section-example" id="headings">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------ Rubriker ------------------------------->
+        <section class="section-example" id="html-headings">
           <h3>Rubriker</h3>
           <p>
             Rubriker skrivs med elementet <code>&lt;h#&gt;</code> där # ersätts
@@ -168,8 +170,9 @@
           <h5>Rubrik h5</h5>
         </section>
 
-        <!-- Länkar -->
-        <section class="section-example" id="links">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Länkar -------------------------------->
+        <section class="section-example" id="html-links">
           <h3>Länkar</h3>
           <p>
             Länkar skrivs <code>&lt;a href=""&gt;&lt;/a&gt;</code>. Mellan
@@ -188,14 +191,15 @@
           </p>
         </section>
 
-        <!-- Bilder -->
-        <section class="section-example" id="images">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Bilder -------------------------------->
+        <section class="section-example" id="html-images">
           <h3>Bilder</h3>
           <p>
             Om du vill lägga in en bild på sidan kan du använda img-taggen. Så
             här ser den ut: <code>&lt;img src="" alt="" /&gt;</code>. Du anger
             sökvägen till filen mellan situationstecknen. Utöver sökvägen till
-            filen har har det här elementet attributet <code>alt=""</code>.
+            filen har har det här elementet ett attribut: <code>alt</code>.
             Många HTML-element har olika attribut och i det här fallet är syftet
             med attributet att beskriva vad bilden föreställer om den inte kan
             visas av webbläsaren. Här nedanför visas en bild som jag har hämtat
@@ -242,7 +246,7 @@
             />
           </div>
 
-          <!-- Om sökvägar -->
+          <!----------------------------- Om sökvägar ----------------------------->
           <div class="section-focus">
             <div class="section-focus-header">
               <svg
@@ -264,11 +268,12 @@
             </div>
             <p>Det finns två varianter av sökvägar: absoluta och relativa.</p>
             <p>
-              Absoluta sökvägar används när du vill länka till något som inte
-              finns på din egna webbsida, som bilden ovanför. Den är från en
-              extern webbplats och sökvägen till bilden är därför absolut. En
-              relativ sökväg anger platsen för en fil i förhållande till den
-              aktuella mappen. Om du vill nå en bildfil som heter
+              En absolut sökväg leder till en bestämd plats och används
+              exempelvis när du vill länka till något som inte finns på din egna
+              webbsida, som bilden ovanför. Den är från en extern webbplats och
+              sökvägen till bilden är därför absolut. En relativ sökväg anger
+              platsen för en fil i förhållande till den aktuella mappen. Om du
+              vill nå en bildfil som heter
               <code>logo.png</code> och som ligger i en mapp som heter bilder är
               sökvägen <code>bilder/logo.png</code>.
             </p>
@@ -284,8 +289,9 @@
           </div>
         </section>
 
-        <!-- Listor -->
-        <section class="section-example" id="lists">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Listor -------------------------------->
+        <section class="section-example" id="html-lists">
           <h4>Listor</h4>
           <p>
             Det går att göra olika typer av listor med HTML, exempelvis ordnade
@@ -348,8 +354,10 @@
             <dd>Andra objektet</dd>
           </dl>
         </section>
-        <!-- Kommentarer -->
-        <section class="section-example" id="comments">
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!----------------------------- Kommentarer ----------------------------->
+        <section class="section-example" id="html-comments">
           <h4>Kommentarer</h4>
           <p>
             Det går att skriva kommentarer i HTML. Dessa bryr sig inte
@@ -361,12 +369,16 @@
             >&lt;!-- Så här skrivs kommentarer i HTML --&gt;</code
           >
         </section>
-        <!-- Escapesekvenser -->
-        <section class="section-example" id="escseq">
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!--------------------------- Escapesekvenser --------------------------->
+        <section class="section-example" id="html-escseq">
           <h4>Escapsekvenser</h4>
         </section>
-        <!-- Formulär-->
-        <section class="section-example" id="forms">
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------ Formulär ------------------------------->
+        <section class="section-example" id="html-forms">
           <h4>Formulär</h4>
           <p>
             Formulär skapas med en kombination av olika element. Elementen
@@ -413,8 +425,8 @@
             För att faktiskt få HTML-formulär att fungera som tänkt, det vill
             säga för att få användning av den information som besökaren fyller
             i, krävs ytterligare kod. Det är ett mer omfattande ämne som inte
-            gås igenom i det här exemplet, men prova gärna att skriva ett
-            meddelande i formuläret nedanför.
+            gås igenom i det här exemplet. Prova gärna att skriva ett meddelande
+            i formuläret nedanför - informationen sparas inte.
           </div>
           <div class="form">
             <form>
@@ -428,7 +440,7 @@
             </form>
             <div class="form-msg-container hidden"></div>
           </div>
-          <p>I stora drag ser formuläret ovan ut så här i kod:</p>
+          <p>I stora drag ser formuläret ovan ut så här i HTML-kod:</p>
           <pre class="code-block">
 &lt;form&gt;
   &lt;label for="message"&gt;Meddelande&lt;/label&gt;
@@ -461,9 +473,37 @@
               <input type="number" id="number" />
             </form>
           </div>
+
+          <p>Formuläret ovanför ser ut så här:</p>
+
+          <pre class="code-block">
+&lt;form>
+  &lt;input type="radio" name="radio" id="alt1" /&gt;
+  &lt;label for="alt1"&gt;Alternativ 1&lt;/label&gt;&lt;br /&gt;
+  &lt;input type="radio" name="radio" id="alt2" /&gt;
+  &lt;label for="alt2"&gt;Alternativ 2&lt;/label>&lt;br /&gt;
+  &lt;textarea cols="45" rows="10"&gt;En ruta för text...&lt;/textarea&gt;
+  &lt;br /&gt;
+  &lt;label for="colors"&gt;Gör ett val&lt;/label&gt;
+  &lt;select id="colors"&gt;
+    &lt;option value="blå"&gt;Gul&lt;/option&gt;
+    &lt;option value="grön"&gt;Grön&lt;/option&gt;
+    &lt;option value="gul"&gt;Svart&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;br /&gt;
+  &lt;label for="pass"&gt;Fält för lösenord: &lt;/label&gt;
+  &lt;input type="password" id="pass" /&gt;&lt;br /&gt;
+  &lt;label for="number"&gt;Bara siffror: &lt;/label&gt;
+  &lt;input type="number" id="number" /&gt;
+  &lt;/form&gt;
+&lt;form&gt;
+</pre
+          >
         </section>
-        <!-- Tabeller -->
-        <section class="section-example" id="tables">
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Tabeller ------------------------------>
+        <section class="section-example" id="html-tables">
           <h4>Tabeller</h4>
           <p>
             Viss information lämpar sig väl att redovisa i tabeller. Några
@@ -507,15 +547,17 @@
           >
         </section>
 
-        <!-- Blandat -->
-        <section class="section-example" id="more">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Blandat ------------------------------->
+        <section class="section-example" id="html-more">
           <h4>Blandat</h4>
           <h5>Radbrytning</h5>
           <p>Radbrytningar kan göras med <code>&lt;br /&gt;</code></p>
         </section>
 
-        <!-- Block och inline -->
-        <section class="section-example" id="block-inline">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!---------------------------- Block inline ----------------------------->
+        <section class="section-example" id="html-block-inline">
           <h3>Block och inline</h3>
           <p>
             I HTML består det mesta av boxar, generellt finns två varianter:
@@ -533,14 +575,26 @@
 &lt;p&gt;Lorem ipsum &lt;span class="blue"&gt;inget radbyte&lt;/span&gt;amet elit.&lt;/p&gt;
 </pre
           >
+          <h4>Mer om div</h4>
           <p>
-            Attributet <code>class</code> i exemplet ovan har med CSS att göra.
+            <code>&lt;div&gt;</code> är ett element som används frekvent. Det är
+            en typ av generisk behållare för innehåll som i sig inte påverkar
+            utseendet men som kan stilsättas med CSS. På så sätt är elementet
+            mångsidigt, det används exempelvis ofta för layout. Det finns
+            CSS-specifika modeller för att designa användargränssnitt,
+            exempelvis Flexbox eller Grid.
+          </p>
+          <h4>Class</h4>
+          <p>
+            Attributet <code>class</code> i exemplet ovan har också med CSS att
+            göra och innebär att stilsättning appliceras på elementet.
             <a href="css.html">Ta mig vidare till avsnittet om CSS</a>.
           </p>
         </section>
 
-        <!-- Läs mer -->
-        <section class="section-example">
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Läs mer ------------------------------->
+        <section class="section-example" id="html-read-more">
           <h4>Läs mer om HTML</h4>
           <p>
             Nu har vi gått igenom några av de grundläggande elementen i HTML.

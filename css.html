@@ -29,8 +29,8 @@
     </header>
     <main>
       <div class="main-sections">
-        <!-- ///////////////////////////////////////////////////////// -->
-        <!-- Inledning -->
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------ Inledning ------------------------------>
         <section>
           <h2>CSS</h2>
           <p>
@@ -71,10 +71,11 @@ body {
 </pre
           >
           <p>
-            Varje regeluppsättning måste omslutas av måsvingar. Varje egenskap
-            och dess värde måste separeras med kolon (:) och varje uppgift, dvs.
-            egenskap/värde måste avslutas med ett semikolon (;). Det är viktigt
-            att hålla sig till reglerna för att CSS-koden ska fungera.
+            Varje regeluppsättning måste omslutas av måsvingar ({ }). Varje
+            egenskap och dess värde måste separeras med kolon (:) och varje
+            uppgift, dvs. egenskap/värde måste avslutas med ett semikolon (;).
+            Det är viktigt att hålla sig till reglerna för att CSS-koden ska
+            fungera.
           </p>
 
           <h2>Innehåll</h2>
@@ -83,12 +84,14 @@ body {
             <li><a href="#css-class-vs-id">Klasser och ID:n</a></li>
             <li><a href="#css-attributes">Några vanliga egenskaper</a></li>
             <li><a href="#css-priority">Prioriteringsregler</a></li>
+            <li><a href="#css-inheritance">Prioriteringsregler</a></li>
             <li><a href="#css-positioning">Positionering</a></li>
             <li><a href="#css-size-margins">Storlek och marginaler</a></li>
           </ul>
         </section>
 
-        <!-- Stilsätta ett dokument -->
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!-------------------------------- Intro -------------------------------->
 
         <section class="section-example" id="css-intro">
           <h3>Stilsätta ett dokument</h3>
@@ -191,7 +194,8 @@ body {
           >
         </section>
 
-        <!-- Klasser och ID:n -->
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------ Klasser/ID ----------------------------->
         <section class="section-example" id="css-class-vs-id">
           <h4>Klasser och ID:n</h4>
           <h5>Klasser</h5>
@@ -275,7 +279,8 @@ h3 {
           >
         </section>
 
-        <!-- Några vanliga egenskaper -->
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------ Egenskaper ----------------------------->
         <section class="section-example" id="css-attributes">
           <h4>Några vanliga egenskaper</h4>
           <p>Här är ett urval av vanliga css-element.</p>
@@ -304,19 +309,87 @@ h3 {
           <code class="code-block">background-color: darkorchid</code>
         </section>
 
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!---------------------------- Prioritering ----------------------------->
         <section class="section-example" id="css-priority">
           <h4>Prioriteringsregler</h4>
+          <p>
+            Vad händer när ett element stilsätts flera gånger? Vad avgör vilken
+            stilsättning som kommer att appliceras? Vi tar ett exempel med
+            följande CSS-kod:
+          </p>
+          <pre class="code-block">
+h2 {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+#my-heading {
+  color: orange;
+}
+</pre
+          >
+          <p>Och följande HTML-kod.</p>
+          <pre class="code-block">
+&lt;body&gt;
+  &lt;h3 class="blue" id="my-heading"&gt;Min rubrik&lt;/h3&gt;  
+&lt;/body&gt;
+</pre
+          >
+          <p>
+            Vilken färg får texten Min rubrik?
+            <a href="example1.html" target="_blank" rel="noopener noreferrer"
+              >Ta reda på det</a
+            >
+          </p>
+          <p>Så här fungerar det, ju högre siffra desto högre relevans:</p>
+          <ol>
+            <li>typ-selektorer, som <code>h2</code> i exemplet</li>
+            <li>klass-selektorer som <code>.blue</code> i exemplet</li>
+            <li>
+              ID-selektorer som <code>#my-heading</code> i exemplet. Därför
+              visas texten som orange.
+            </li>
+            <li>
+              Inline-stil - om man applicerar stilsättning direkt på elementet i
+              HTML-koden skriver det över extern stilsättning.
+            </li>
+          </ol>
+          <h5>!important</h5>
+          <p>
+            Det finns möjlighet att kringgå prioriteringsreglerna i CSS genom
+            att ange <code>!important</code>. När <code>important</code> används
+            skriver regeln över alla andra. Det är dock inte rekommenderat att
+            förlita sig på <code>important</code> eftersom man därigenom frångår
+            den naturliga ordningen, det blir svårare att felsöka. Man bör
+            istället använda sig av den inbyggda ordningen så långt som möjligt
+            eftersom koden blir mer förutsägbar.
+          </p>
         </section>
 
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!--------------------------------- Arv --------------------------------->
+        <section class="section-example" id="css-inheritance">
+          <h4>Arv</h4>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!---------------------------- Positionering ---------------------------->
         <section class="section-example" id="css-positioning">
           <h4>Positionering</h4>
         </section>
 
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!----------------------- Storlek och marginaler ------------------------>
         <section class="section-example" id="css-size-margins">
           <h4>Storlek och marginaler</h4>
         </section>
       </div>
     </main>
+
+    <!-- ///////////////////////////////////////////////////////////////// -->
+    <!-------------------------------- Footer ------------------------------->
     <footer>
       <div class="footer-text">
         Den här sidan har byggts av Mattias Kind som en del av kursen Agila

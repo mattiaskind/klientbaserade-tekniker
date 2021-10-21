@@ -1,16 +1,17 @@
+'use strict';
+
 const button = document.querySelector('.btn-message');
 const userMessage = document.querySelector('#message');
 const formMsgContainer = document.querySelector('.form-msg-container');
 
-// funktionen sanitizeString är hämtad från stackoverflow
-// regex-funktionen tar bort otillåtna tecken.
+// Funktionen sanitizeString är hämtad från stackoverflow.
+// Jag behövde ha ett regex som tar bort otillåtna tecken.
 const sanitizeString = function (str) {
   str = str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim, '');
   return str.trim();
 };
 
-// Skickas vidare till event-hanteraren och körs när besökaren
-// klickar på knappen i formuläret.
+// Funktionen nedan skickas vidare till event-hanteraren och körs när besökaren klickar på knappen i formuläret.
 const displayMessage = function (e) {
   e.preventDefault();
 
@@ -38,5 +39,5 @@ const displayMessage = function (e) {
   formMsgContainer.insertAdjacentHTML('afterbegin', html);
 };
 
-// Lägger till event listener till formulär-knappen
+// Lägger till event-listener på formulär-knappen
 button.addEventListener('click', displayMessage);
