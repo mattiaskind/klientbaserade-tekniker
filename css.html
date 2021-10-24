@@ -40,18 +40,18 @@
             vilken färg det ska vara på texten. Se vad CSS gör med den här sidan
             genom att klicka på knappen nedan.
           </p>
-          <button id="btn">Utan CSS</button>
+          <button id="btn">Utan CSS-fil</button>
         </section>
 
         <section>
           <h3>Hur funkar det?</h3>
           <p>
             Om vi utgår från att vi vill ändra bakgrundsfärgen på body-elementet
-            i ett HTML-dokument till mörkblå kan vi göra på följande sätt:
+            i ett HTML-dokument till ljusblå kan vi göra på följande sätt:
           </p>
           <pre class="code-block">
 body {
-  background-color: darkblue;
+  background-color: lightblue;
 }
 </pre
           >
@@ -65,11 +65,19 @@ body {
           </p>
           <pre class="code-block">
 body {
-  background-color: darkblue;
-  font-size: 20px;
+  background-color: lightblue;
+  font-size: 30px;
 }
 </pre
           >
+          <a
+            href="examples/example-intro.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se exemplet
+          </a>
           <p>
             Varje regeluppsättning måste omslutas av måsvingar ({ }). Varje
             egenskap och dess värde måste separeras med kolon (:) och varje
@@ -85,6 +93,7 @@ body {
             <li><a href="#css-attributes">Några vanliga egenskaper</a></li>
             <li><a href="#css-priority">Prioriteringsregler</a></li>
             <li><a href="#css-inheritance">Arv</a></li>
+            <li><a href="#css-float">Egenskapen float</a></li>
             <li><a href="#css-positioning">Positionering</a></li>
             <li><a href="#css-size-margins">Storlek och marginaler</a></li>
           </ul>
@@ -303,9 +312,17 @@ h3 {
           </span>
           <code class="code-block">word-spacing: 5px</code>
 
-          <span style="background-color: darkorchid; color: white"
-            >Bakgrundsfärg</span
+          <div
+            style="
+              background-color: darkorchid;
+              color: white;
+              padding: 1rem;
+              margin: 0.5rem 0;
+            "
           >
+            Bakgrundsfärg
+          </div>
+
           <code class="code-block">background-color: darkorchid</code>
         </section>
 
@@ -333,23 +350,27 @@ h2 {
           <p>Och följande HTML-kod.</p>
           <pre class="code-block">
 &lt;body&gt;
-  &lt;h3 class="blue" id="my-heading"&gt;Min rubrik&lt;/h3&gt;  
+  &lt;h2 class="blue" id="my-heading"&gt;Min rubrik&lt;/h2&gt;  
 &lt;/body&gt;
 </pre
           >
-          <p>
-            Vilken färg får texten Min rubrik?
-            <a href="example1.html" target="_blank" rel="noopener noreferrer"
-              >Ta reda på det</a
-            >
-          </p>
+
+          <a
+            href="examples/example-prio.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se resultatet av exemplet ovan
+          </a>
+
           <p>Så här fungerar det, ju högre siffra desto högre relevans:</p>
           <ol>
             <li>typ-selektorer, som <code>h2</code> i exemplet</li>
             <li>klass-selektorer som <code>.blue</code> i exemplet</li>
             <li>
               ID-selektorer som <code>#my-heading</code> i exemplet. Därför
-              visas texten som orange.
+              visas texten som orange (se länk till exemplet ovan).
             </li>
             <li>
               Inline-stil - om man applicerar stilsättning direkt på elementet i
@@ -360,7 +381,7 @@ h2 {
           <p>
             Det finns möjlighet att kringgå prioriteringsreglerna i CSS genom
             att ange <code>!important</code>. När <code>important</code> används
-            skriver regeln över alla andra regler. Det är normalt inte
+            skriver regeln över alla andra regler. Det är normalt inte att
             rekommendera eftersom man därigenom frångår den naturliga ordningen,
             det blir svårare att felsöka. Man bör istället använda sig av den
             inbyggda ordningen så långt som möjligt eftersom koden blir mer
@@ -371,13 +392,147 @@ h2 {
         <!-- ///////////////////////////////////////////////////////////////// -->
         <!--------------------------------- Arv --------------------------------->
         <section class="section-example" id="css-inheritance">
-          <h4>Arv</h4>
+          <h4>I CSS kan egenskaper ärvas</h4>
+          <p>
+            Om ett element inte stilsätts ärver det i många fall egenskaperna
+            från sin förälder.
+          </p>
+          <pre class="code-block">
+body {
+  color: green;
+}
+</pre
+          >
+          <p>
+            All text som ligger inom <code>&lt;body&gt;</code>-elementet,
+            oavsett det är text inom <code>&lt;p&gt;</code>,
+            <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>,
+            <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code> osv. kommer att bli
+            grön om inget annat anges för just det elementet.
+          </p>
+          <a
+            href="examples/example-inheritance.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se ett exempel
+          </a>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!--------------------------------- Float --------------------------------->
+        <section class="section-example" id="css-float">
+          <h4>Float</h4>
+          <p>
+            Med egenskapen float kan ett element placeras på vänster eller höger
+            sida av sitt föräldraelement. Float-egenskapen gör att elementet tas
+            bort från det normala flödet men det ingår ändå som en del av
+            dokumentet och text samt andra inline-element kan flöda runt
+            elementet.
+          </p>
+          <p>
+            Med float förflyttas elementet åt vänster eller höger till dess att
+            det nuddar kanten av antingen boxen det placerats i eller ett annat
+            element som har egenskapen float.
+          </p>
+          <a
+            href="examples/example-float.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se ett exempel
+          </a>
+
+          <pre class="code-block">
+.container {
+  float: left;
+}
+</pre
+          >
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
         <!---------------------------- Positionering ---------------------------->
         <section class="section-example" id="css-positioning">
           <h4>Positionering</h4>
+          <p>
+            Med hjälp av egenskapen position är det möjligt att använda CSS för
+            att positionera HTML-element. Det finns fem olika värden som kan
+            anges:
+          </p>
+          <ul>
+            <li>
+              <code>static</code> - elementet positioneras i enlighet
+              dokumentets ordinarie flöde. Detta är standardvärdet.
+            </li>
+            <li>
+              <code>relative</code> - elementet följer det vanliga flödet men
+              kan förflyttas med hjälp av värdena, <code>top</code>,
+              <code>right</code>, <code>bottom</code> och <code>left</code>
+            </li>
+            <ul>
+              <li>
+                <a
+                  href="examples/example-relative.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ett exempel som visar relative</a
+                >
+              </li>
+            </ul>
+            <li>
+              <code>absolute</code> - elementet tas bort från det vanliga flödet
+              och det utrymme som normalt beräknas för elementet tas bort.
+              Elementets position beräknas utifrån föräldraelementet.
+            </li>
+            <ul>
+              <li>
+                <a
+                  href="examples/example-absolute.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ett exempel som visar absolute</a
+                >
+              </li>
+            </ul>
+            <li>
+              <code>fixed</code> - elementet tas bort från det vanliga flödet
+              och dess position beräknas utifrån webbläsarfönstret
+            </li>
+            <ul>
+              <li>
+                <a
+                  href="examples/example-fixed.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ett exempel som visar fixed</a
+                >
+              </li>
+            </ul>
+            <li>
+              <code>sticky</code> - elementets position avgörs av hur användaren
+              scrollat webbläsarfönstret. När användaren scrollar förbi
+              sticky-elementet uppför det sig som om det vore "fixed", till dess
+              att föräldraelementet passerats. Det är knepigt att förklara hur
+              det funkar, klicka på länken nedan för ett exempel.
+            </li>
+            <ul>
+              <li>
+                <a
+                  href="examples/example-sticky.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ett exempel som visar sticky</a
+                >
+              </li>
+            </ul>
+          </ul>
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->

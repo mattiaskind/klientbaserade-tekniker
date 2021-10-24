@@ -26,7 +26,7 @@ btn.addEventListener('click', (e) => {
   // Skapa link-elementet
   head.appendChild(style);
   // Ändra text på knappen
-  btn.innerText = 'Utan CSS';
+  btn.innerText = 'Utan CSS-fil';
   // Ändra statusen eftersom det finns en länkad css-fil
   cssActive = true;
 });
