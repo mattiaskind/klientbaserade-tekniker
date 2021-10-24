@@ -399,6 +399,14 @@ code {
   margin: 0;
 }
 
+.label {
+  margin-bottom: 0.2rem;
+}
+
+#message {
+  max-width: 90%;
+}
+
 button {
   background-color: var(--color-button-bg);
   border: none;
@@ -438,10 +446,6 @@ select {
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   color: var(--color-font-body);
-}
-
-.label {
-  margin-bottom: 0.2rem;
 }
 
 /***************************************************************************/
