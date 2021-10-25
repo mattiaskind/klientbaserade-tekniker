@@ -17,7 +17,6 @@ const displayMessage = function (e) {
 
   // Kontrollera om input-fältet tomt eller enbart innehåller blanksteg
   if (!userMessage.value.trim()) {
-    const text = `Du måste ange ett meddelande.`;
     formMsgContainer.innerText = 'Du måste ange ett meddelande';
     return;
   }
