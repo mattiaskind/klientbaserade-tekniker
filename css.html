@@ -95,6 +95,7 @@ body {
             <li><a href="#css-inheritance">Arv</a></li>
             <li><a href="#css-float">Egenskapen float</a></li>
             <li><a href="#css-positioning">Positionering</a></li>
+            <li><a href="#css-size">Storlek</a></li>
             <li><a href="#css-margin-padding">Marginaler och padding</a></li>
           </ul>
         </section>
@@ -426,9 +427,9 @@ body {
           <h4>Float</h4>
           <p>
             Med egenskapen float kan ett element placeras på vänster eller höger
-            sida av sitt föräldraelement. Float-egenskapen gör att elementet tas
+            sida i sitt föräldraelement. Float-egenskapen gör att elementet tas
             bort från det normala flödet men det ingår ändå som en del av
-            dokumentet och text samt andra inline-element kan flöda runt
+            dokumentet. Text och inline-element kan flöda runt
             elementet.
           </p>
           <p>
@@ -458,10 +459,17 @@ body {
         <section class="section-example" id="css-positioning">
           <h4>Positionering</h4>
           <p>
-            Med hjälp av egenskapen position är det möjligt att använda CSS för
-            att positionera HTML-element. Det finns fem olika värden som kan
-            anges:
+            Med hjälp av egenskapen <code>position</code> är det möjligt att använda CSS för att positionera HTML-element. Det finns fem olika värden som kan användas, mer om dem nedanför. 
+            För att positionera elementen anges egenskaperna <code>top</code>,
+            <code>right</code>, <code>bottom</code>, <code>left</code> samt ett värde. Det kan exempelvis se ut så här:
           </p>
+<pre class="code-block">
+.box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+</pre>
           <ul>
             <li>
               <code>static</code> - elementet positioneras i enlighet
@@ -479,8 +487,7 @@ body {
               </ul>
             </li>
             <li>
-              <code>relative</code> - elementet följer det vanliga flödet men
-              kan förflyttas med hjälp av värdena, <code>top</code>,
+              <code>relative</code> - elementet följer det vanliga flödet och platsen som elementet tar beräknas som vanligt. Det kan dock förflyttas från den ursprungliga platsen med hjälp av värdena, <code>top</code>,
               <code>right</code>, <code>bottom</code> och <code>left</code>
               <ul>
                 <li>
@@ -547,6 +554,31 @@ body {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
+        <!------------------------------- Storlek ------------------------------->
+        <section class="section-example" id="css-size">
+          <h4>Storlek</h4>
+          <p>
+            Det går att bestämma storleken på element med hjälp av egenskaperna
+            <code>width</code> och <code>height</code>.
+<pre class="code-block">
+.box {
+  width: 200px;
+  height: 100px;
+}
+</pre>
+           
+          </p>
+          <a
+            href="examples/example-size.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se exempel
+          </a>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
         <!----------------------- Marginaler och padding ------------------------>
         <section class="section-example" id="css-margin-padding">
           <h4>Marginaler och Padding</h4>
@@ -557,6 +589,12 @@ body {
               <li>Padding anger avståndet inuti ett element, det vill säga hur mycket utrymme det ska finnas på insidan från kanterna.</li>
               <li>Margin anger hur mycket utrymme det ska finnas utanför elementet.</li>
             </ul>
+<pre class="code-block">
+p {
+  margin: 10px;
+  padding: 15px;
+}
+</pre>
             <a
             href="examples/example-mp.html"
             target="_blank"
@@ -566,7 +604,28 @@ body {
             Exempel på margin och padding</a
           >
           </p>
-          <p>Det är möjligt att ange ett värde för pad</p>
+          <p>
+            Om man endast anger ett värde kommer det att gälla på varje sida om elementet. Om man istället vill ha olika värden, exempelvis ett för sidorna och ett för toppen/botten kan man använda sig av specifika egenskaper.
+          </p>
+            <ul>
+              <li><code>margin-top</code></li>
+              <li><code>margin-right</code></li>
+              <li><code>margin-bottom</code></li>
+              <li><code>margin-left</code></li>                            
+            </ul>
+            <p>Det går också att använda egenskapen <code>margin</code> och ange fler värden.</p>
+<pre class="code-block">
+p {
+  margin: 10px 20px 5px 20px;
+}
+</pre>
+        <ul>
+          <li>När ett värde anges kommer det att gälla alla fyra sidor. </li>
+          <li>När två värden anges kommer det första att gälla för toppen och botten och det andra för sidorna.</li>
+          <li> När tre värden anges gäller det första för toppen, det andra för respektive sida och det tredje för botten. </li>
+          <li>Med fyra värden gäller ordningen toppen, högra sidan, botten, vänstra sidan.</li>
+        </ul>
+        <p>Samma principer gäller även för egenskapen <code>padding</code>.</p>
         </section>
       </div>
     </main>
