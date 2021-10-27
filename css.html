@@ -30,7 +30,7 @@
     <main>
       <div class="main-sections">
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!------------------------------ Inledning ------------------------------>
+        <!-- ************************** Inledning **************************** -->
         <section>
           <h2>CSS</h2>
           <p>
@@ -101,7 +101,7 @@ body {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!-------------------------------- Intro -------------------------------->
+        <!-- **************************** Intro ****************************** -->
 
         <section class="section-example" id="css-intro">
           <h3>Stilsätta ett dokument</h3>
@@ -203,18 +203,17 @@ body {
 </pre
           >
           <a
-          href="examples/example-inline.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="example-link"
-        >
-          Se inline-exemplet här
-        </a>
-
+            href="examples/example-inline.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se inline-exemplet här
+          </a>
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!------------------------------ Klasser/ID ----------------------------->
+        <!-- ************************** Klasser/ID *************************** -->
         <section class="section-example" id="css-class-vs-id">
           <h4>Klasser och ID:n</h4>
           <h5>Klasser</h5>
@@ -283,13 +282,13 @@ h3 {
 </pre
           >
           <a
-          href="examples/example-classes.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="example-link"
-        >
-          Se exemplet ovan
-        </a>
+            href="examples/example-classes.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se exemplet ovan
+          </a>
           <h5>ID</h5>
           <p>
             Istället för klasser går det också att använda sig av ID:n. Det
@@ -307,7 +306,7 @@ h3 {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!------------------------------ Egenskaper ----------------------------->
+        <!-- ************************** Egenskaper *************************** -->
         <section class="section-example" id="css-attributes">
           <h4>Några vanliga egenskaper</h4>
           <p>Här är ett urval av vanliga css-element.</p>
@@ -345,7 +344,7 @@ h3 {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!---------------------------- Prioritering ----------------------------->
+        <!-- ************************** Prioritering ************************* -->
         <section class="section-example" id="css-priority">
           <h4>Prioriteringsregler</h4>
           <p>
@@ -408,7 +407,7 @@ h2 {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!--------------------------------- Arv --------------------------------->
+        <!-- ***************************** Arv ******************************* -->
         <section class="section-example" id="css-inheritance">
           <h4>I CSS kan egenskaper ärvas</h4>
           <p>
@@ -439,15 +438,14 @@ body {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!--------------------------------- Float --------------------------------->
+        <!-- ***************************** Float ***************************** -->
         <section class="section-example" id="css-float">
           <h4>Float</h4>
           <p>
             Med egenskapen float kan ett element placeras på vänster eller höger
             sida i sitt föräldraelement. Float-egenskapen gör att elementet tas
             bort från det normala flödet men det ingår ändå som en del av
-            dokumentet. Text och inline-element kan flöda runt
-            elementet.
+            dokumentet. Text och inline-element kan flöda runt elementet.
           </p>
           <p>
             Med float förflyttas elementet åt vänster eller höger till dess att
@@ -472,21 +470,25 @@ body {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!---------------------------- Positionering ---------------------------->
+        <!-- ************************* Positionering ************************* -->
         <section class="section-example" id="css-positioning">
           <h4>Positionering</h4>
           <p>
-            Med hjälp av egenskapen <code>position</code> är det möjligt att använda CSS för att positionera HTML-element. Det finns fem olika värden som kan användas, mer om dem nedanför. 
-            För att positionera elementen anges egenskaperna <code>top</code>,
-            <code>right</code>, <code>bottom</code>, <code>left</code> samt ett värde. Det kan exempelvis se ut så här:
+            Med hjälp av egenskapen <code>position</code> är det möjligt att
+            använda CSS för att positionera HTML-element. Det finns fem olika
+            värden som kan användas, mer om dem nedanför. För att positionera
+            elementen anges egenskaperna <code>top</code>, <code>right</code>,
+            <code>bottom</code>, <code>left</code> samt ett värde. Det kan
+            exempelvis se ut så här:
           </p>
-<pre class="code-block">
+          <pre class="code-block">
 .box {
   position: absolute;
   top: 50px;
   left: 50px;
 }
-</pre>
+</pre
+          >
           <ul>
             <li>
               <code>static</code> - elementet positioneras i enlighet
@@ -504,8 +506,11 @@ body {
               </ul>
             </li>
             <li>
-              <code>relative</code> - elementet följer det vanliga flödet och platsen som elementet tar beräknas som vanligt. Det kan dock förflyttas från den ursprungliga platsen med hjälp av värdena, <code>top</code>,
-              <code>right</code>, <code>bottom</code> och <code>left</code>
+              <code>relative</code> - elementet följer det vanliga flödet och
+              platsen som elementet tar beräknas som vanligt. Det kan dock
+              förflyttas från den ursprungliga platsen med hjälp av värdena,
+              <code>top</code>, <code>right</code>, <code>bottom</code> och
+              <code>left</code>
               <ul>
                 <li>
                   <a
@@ -571,20 +576,21 @@ body {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!------------------------------- Storlek ------------------------------->
+        <!-- **************************** Storlek **************************** -->
         <section class="section-example" id="css-size">
           <h4>Storlek</h4>
           <p>
             Det går att bestämma storleken på element med hjälp av egenskaperna
             <code>width</code> och <code>height</code>.
-<pre class="code-block">
+          </p>
+          <pre class="code-block">
 .box {
   width: 200px;
   height: 100px;
 }
-</pre>
-           
-          </p>
+</pre
+          >
+
           <a
             href="examples/example-size.html"
             target="_blank"
@@ -596,23 +602,30 @@ body {
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
-        <!----------------------- Marginaler och padding ------------------------>
+        <!-- ******************** Marginaler och padding ********************* -->
         <section class="section-example" id="css-margin-padding">
           <h4>Marginaler och Padding</h4>
           <p>
             Med hjälp av CSS går det att lägga till utrymme såväl i som utanför
             HTML-element.
-            <ul>
-              <li>Padding anger avståndet inuti ett element, det vill säga hur mycket utrymme det ska finnas på insidan från kanterna.</li>
-              <li>Margin anger hur mycket utrymme det ska finnas utanför elementet.</li>
-            </ul>
-<pre class="code-block">
+          </p>
+          <ul>
+            <li>
+              Padding anger avståndet inuti ett element, det vill säga hur
+              mycket utrymme det ska finnas på insidan från kanterna.
+            </li>
+            <li>
+              Margin anger hur mycket utrymme det ska finnas utanför elementet.
+            </li>
+          </ul>
+          <pre class="code-block">
 p {
   margin: 10px;
   padding: 15px;
 }
-</pre>
-            <a
+</pre
+          >
+          <a
             href="examples/example-mp.html"
             target="_blank"
             rel="noopener noreferrer"
@@ -620,35 +633,50 @@ p {
           >
             Exempel på margin och padding</a
           >
-          </p>
           <p>
-            Om man endast anger ett värde kommer det att gälla på varje sida om elementet. Om man istället vill ha olika värden, exempelvis ett för sidorna och ett för toppen/botten kan man använda sig av specifika egenskaper.
+            Om man endast anger ett värde kommer det att gälla på varje sida om
+            elementet. Om man istället vill ha olika värden, exempelvis ett för
+            sidorna och ett för toppen/botten kan man använda sig av specifika
+            egenskaper.
           </p>
-            <ul>
-              <li><code>margin-top</code></li>
-              <li><code>margin-right</code></li>
-              <li><code>margin-bottom</code></li>
-              <li><code>margin-left</code></li>                            
-            </ul>
-            <p>Det går också att använda egenskapen <code>margin</code> och ange fler värden.</p>
-<pre class="code-block">
+          <ul>
+            <li><code>margin-top</code></li>
+            <li><code>margin-right</code></li>
+            <li><code>margin-bottom</code></li>
+            <li><code>margin-left</code></li>
+          </ul>
+          <p>
+            Det går också att använda egenskapen <code>margin</code> och ange
+            fler värden.
+          </p>
+          <pre class="code-block">
 p {
   margin: 10px 20px 5px 20px;
 }
-</pre>
-        <ul>
-          <li>När ett värde anges kommer det att gälla alla fyra sidor. </li>
-          <li>När två värden anges kommer det första att gälla för toppen och botten och det andra för sidorna.</li>
-          <li> När tre värden anges gäller det första för toppen, det andra för respektive sida och det tredje för botten. </li>
-          <li>Med fyra värden gäller ordningen toppen, högra sidan, botten, vänstra sidan.</li>
-        </ul>
-        <p>Samma principer kan användas för <code>padding</code>.</p>
+</pre
+          >
+          <ul>
+            <li>När ett värde anges kommer det att gälla alla fyra sidor.</li>
+            <li>
+              När två värden anges kommer det första att gälla för toppen och
+              botten och det andra för sidorna.
+            </li>
+            <li>
+              När tre värden anges gäller det första för toppen, det andra för
+              respektive sida och det tredje för botten.
+            </li>
+            <li>
+              Med fyra värden gäller ordningen toppen, högra sidan, botten,
+              vänstra sidan.
+            </li>
+          </ul>
+          <p>Samma principer kan användas för <code>padding</code>.</p>
         </section>
       </div>
     </main>
 
     <!-- ///////////////////////////////////////////////////////////////// -->
-    <!-------------------------------- Footer ------------------------------->
+    <!-- ***************************** Footer **************************** -->
     <footer>
       <div class="footer-text">
         Den här sidan har byggts av Mattias Kind som en del av kursen Agila
