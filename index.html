@@ -133,7 +133,6 @@
 &lt;/html&gt;
 </pre
           >
-
           <h2>Fler element</h2>
           <ul class="content-list">
             <li><a href="#html-headings">Rubriker</a></li>
@@ -146,6 +145,7 @@
             <li><a href="#html-tables">Tabeller</a></li>
             <li><a href="#html-more">Blandat</a></li>
             <li><a href="#html-block-inline">Block och inline</a></li>
+            <li><a href="#html-semantic">Beskrivande element</a></li>
             <li><a href="#html-read-more">Läs mer</a></li>
           </ul>
         </section>
@@ -610,6 +610,51 @@
             göra och innebär att stilsättning appliceras på elementet.
             <a href="css.html">Ta mig vidare till avsnittet om CSS</a>.
           </p>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!-- ********************* Beskrivande element *********************** -->
+        <section class="section-example" id="html-semantic">
+          <h3>Beskrivande element</h3>
+          <p>
+            I stället för att använda generiska behåller som
+            <code>&lt;div&gt;</code> finns det ett antal (cirka 100 stycken)
+            semantiska element som kan användas för att bättre beskriva koden.
+            En av fördelarna med att använda semantiska element är att
+            skärmläsare lättare kan känna igen webbsidans olika sektioner. Det
+            är dessutom lättare att förstå vad koden betyder.
+          </p>
+          <p>Här är några semantiska element.</p>
+          <ul>
+            <li><code>&lt;article&gt;</code></li>
+            <li><code>&lt;details&gt;</code></li>
+            <li><code>&lt;footer&gt;</code></li>
+            <li><code>&lt;header&gt;</code></li>
+            <li><code>&lt;main&gt;</code></li>
+            <li><code>&lt;nav&gt;</code></li>
+            <li><code>&lt;section&gt;</code></li>
+          </ul>
+          <p>Så här kan en enkel struktur med semantiska element se ut.</p>
+          <pre class="code-block">
+...
+&lt;body&gt;
+  &lt;header&gt;
+    Sidhuvud
+    &lt;nav&gt;Sidnavigation&lt;/nav&gt;   
+  &lt;/header&gt;   
+  &lt;main&gt;
+    &lt;section&gt;
+      En sektion med innehåll.
+    &lt;/section&gt;
+    &lt;section&gt;
+      En annan sektion med innehåll.
+    &lt;/section&gt;  
+  &lt;/main&gt;
+  &lt;footer&gt;Sidfot&lt;/footer&gt;
+&lt;/body&gt;
+...
+</pre
+          >
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
