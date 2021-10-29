@@ -482,3 +482,34 @@ footer {
 .hidden {
   display: none;
 }
+
+.color-example {
+  color: blue;
+}
+
+.font-example {
+  font: 20px Georgia;
+}
+
+.align-example {
+  text-align: right;
+}
+
+.decoration-example {
+  text-decoration: underline;
+}
+
+.space-example {
+  word-spacing: 5px;
+}
+
+.background-example {
+  background-color: darkorchid;
+  color: white;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.border {
+  border: 1px solid black;
+}

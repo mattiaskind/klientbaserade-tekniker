@@ -97,6 +97,7 @@ body {
             <li><a href="#css-positioning">Positionering</a></li>
             <li><a href="#css-size">Storlek</a></li>
             <li><a href="#css-margin-padding">Marginaler och padding</a></li>
+            <li><a href="#css-liststyles">Listor</a></li>
           </ul>
         </section>
 
@@ -289,6 +290,18 @@ h3 {
           >
             Se exemplet ovan
           </a>
+          <p>
+            Det går också att ge ett element flera klasser samtidigt, eller
+            specificera flera selektorer för ett och samma kodblock.
+          </p>
+          <a
+            href="examples/example-selectors.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Ta en titt här
+          </a>
           <h5>ID</h5>
           <p>
             Istället för klasser går det också att använda sig av ID:n. Det
@@ -309,38 +322,55 @@ h3 {
         <!-- ************************** Egenskaper *************************** -->
         <section class="section-example" id="css-attributes">
           <h4>Några vanliga egenskaper</h4>
-          <p>Här är ett urval av vanliga css-element.</p>
+          <p>Här är ett urval av några vanliga CSS-egenskaper.</p>
 
-          <span style="color: blue">Med color kan du ange textfärgen.</span>
+          <span class="color-example">Med color kan du ange textfärgen.</span>
           <code class="code-block">color: blue</code>
 
-          <span style="font: 20px Georgia">
+          <span class="font-example">
             Med egenskapen font kan du bland annat ange font och storlek.
           </span>
           <code class="code-block">font: 20px Georgia</code>
 
-          <span style="text-decoration: underline">
+          <div class="align-example">Med text-align kan texten placeras.</div>
+          <code class="code-block">text-align: right</code>
+
+          <span class="decoration-example">
             Med text-decoration kan du ändra textens utseende.
           </span>
           <code class="code-block">text-decoration: underline</code>
 
-          <span style="word-spacing: 5px">
-            Större mellanrum mellan orden.
-          </span>
+          <span class="border"
+            >Du kan lägga en ram runt element med border</span
+          >
+          <code class="code-block">border: 1px solid black;</code>
+
+          <span class="space-example"> Större mellanrum mellan orden. </span>
           <code class="code-block">word-spacing: 5px</code>
 
-          <div
-            style="
-              background-color: darkorchid;
-              color: white;
-              padding: 1rem;
-              margin: 0.5rem 0;
-            "
-          >
-            Bakgrundsfärg
-          </div>
-
+          <div class="background-example">Bakgrundsfärg</div>
           <code class="code-block">background-color: darkorchid</code>
+
+          <p>
+            Det går också att lägga till backgundsbilder med egenskapen
+            <code>bacgkround-image: url();</code>. Inom parenteserna anger man
+            sökvägen till bildfilen.
+            <a
+              href="examples/example-backgroundimage.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Du kan se ett exempel på en bakgrund här.
+            </a>
+            //
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Och läsa mer om bakgrundsbilder på MDN:s sida</a
+            >
+          </p>
         </section>
 
         <!-- ///////////////////////////////////////////////////////////////// -->
@@ -352,6 +382,7 @@ h3 {
             stilsättning som kommer att appliceras? Vi tar ett exempel med
             följande CSS-kod:
           </p>
+
           <pre class="code-block">
 h2 {
   color: green;
@@ -508,8 +539,9 @@ body {
             <li>
               <code>relative</code> - elementet följer det vanliga flödet och
               platsen som elementet tar beräknas som vanligt. Det kan dock
-              förflyttas från den ursprungliga platsen med hjälp av värdena,
-              <code>top</code>, <code>right</code>, <code>bottom</code> och
+              förflyttas från den ursprungliga platsen med hjälp av
+              egenskaperna, <code>top</code>, <code>right</code>,
+              <code>bottom</code> och
               <code>left</code>
               <ul>
                 <li>
@@ -671,6 +703,37 @@ p {
             </li>
           </ul>
           <p>Samma principer kan användas för <code>padding</code>.</p>
+          <h5>Centrera med margin</h5>
+          <p>
+            I vissa lägen går det centrera element genom att använda
+            <code>margin: auto</code>.
+          </p>
+          <a
+            href="examples/example-center.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Se ett exempel på det</a
+          >
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////// -->
+        <!-- **************************** Listor ***************************** -->
+        <section class="section-example" id="css-liststyles">
+          <h4>Listor</h4>
+          <p>
+            Det går att stilsätta listor på olika sätt med egenskapen
+            <code>list-style-type</code>
+          </p>
+          <a
+            href="examples/example-liststyles.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="example-link"
+          >
+            Klicka på länken för att se olika varianter av listor</a
+          >
         </section>
       </div>
     </main>

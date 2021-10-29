@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klientbaserade tekniker</title>
+    <style>
+      h2,
+      p {
+        color: blueviolet;
+      }
+
+      .p-black {
+        color: black;
+      }
+
+      pre {
+        border: 1px solid rgb(180, 180, 180);
+        padding: 10px;
+      }
+
+      .my-color {
+        color: blue;
+      }
+
+      .my-border {
+        border: 1px solid rgb(124, 124, 124);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Den här rubriken har samma stilsättning som...</h2>
+    <p>... det här p-elementet</p>
+
+    <p class="p-black">
+      CSS-koden anger att färgen ska appliceras på både h2- och p-elementen.
+      Selektorerna är separerade med kommatecken.
+    </p>
+    <pre>
+CSS
+h2, p {
+    color: blueviolet;
+}
+
+HTML
+&lt;h2&gt;Den här rubriken har samma stilsättning som...&lt;/h2&gt;
+&lt;p&gt;... det här p-elementet&lt;/p&gt;
+</pre
+    >
+
+    <p class="p-black">
+      Det går också att ange att ett HTML-element ska ha flera klasser genom att
+      separera dem med ett blanksteg i class-attributet. Exempelvis texten nedan
+      som är färgsatt och har fått en ram med hjälp av två separata
+      klass-selektorer:
+    </p>
+
+    <span class="my-color my-border">Blå text med ram runt</span>
+
+    <pre>
+CSS
+.my-color {
+    color: blue;
+}
+.my-border {
+    border: 1px solid black;
+}
+
+HTML
+&lt;span class="my-color my-border"&gt;Blå text med ram runt&lt;/span&gt;
+</pre
+    >
+  </body>
+</html>
