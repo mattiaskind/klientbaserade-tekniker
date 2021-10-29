@@ -550,40 +550,49 @@
           <p>
             Viss information lämpar sig väl att redovisa i tabeller. Några
             vanligt förekommande element för att skapa tabeller i HTML är
-            <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> och
-            <code>&lt;th&gt;</code>.
+            <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>,
+            <code>&lt;th&gt;</code>, <code>&lt;thead&gt;</code> och
+            <code>&lt;tbody&gt;</code>.
           </p>
           <p>Här är ett exempel på en tabell:</p>
           <table>
-            <tr>
-              <th>Kategori 1</th>
-              <th>Kategori 2</th>
-              <th>Kategori 3</th>
-            </tr>
-            <tr>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-            </tr>
-            <tr>
-              <th>4</th>
-              <th>5</th>
-              <th>6</th>
-            </tr>
+            <thead>
+              <tr>
+                <th>Kategori 1</th>
+                <th>Kategori 2</th>
+                <th>Kategori 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+              </tr>
+              <tr>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+              </tr>
+            </tbody>
           </table>
           <pre class="code-block">
 &lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Kategori 1&lt;/th&gt;
-    &lt;th&gt;Kategori 2&lt;/th&gt;
-    &lt;th&gt;Kategori 3&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;1&lt;/th&gt;
-    &lt;th&gt;2&lt;/th&gt;
-    &lt;th&gt;3&lt;/th&gt;
-  &lt;/tr&gt;
-  ...
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Kategori 1&lt;/th&gt;
+      &lt;th&gt;Kategori 2&lt;/th&gt;
+      &lt;th&gt;Kategori 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;th&gt;3&lt;/th&gt;
+    &lt;/tr&gt;
+    ...
+  &lt;/tbody&gt;
 &lt;/table&gt;
 </pre
           >
